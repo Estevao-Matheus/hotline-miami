@@ -33,7 +33,7 @@ func disparar_dialogo_intro() -> void:
 	var falas_intro = [
 		{"name": "PLAYER", "text": "Alguém deixou uma mensagem na secretária eletrônica...", "icon": retrato_player},
 		{"name": "PLAYER", "text": "Não era mais pra me chamarem aqui Jones esqueceu?...", "icon": retrato_player},
-		{"name": "JONES", "text": "Qaundo voce saiu sabia que iria voltar um dia para cumprir a jornada!.", "icon": retrato_boss},
+		{"name": "JONES", "text": "Qaundo voce saiu sabia que iria voltar um dia para cumprir a jornada!", "icon": retrato_boss},
 		{"name": "JONES", "text": "Quando te ajudei a terminar seu caminho eu te avisei, está na hora de terminar o que não foi concluido.", "icon": retrato_boss},
 		{"name": "PLAYER", "text": "OK, me de o endereco dele, irei terminar.", "icon": retrato_player},
 		{"name": "JONES", "text": "O endereço é na boate. Não deixe testemunhas.", "icon": retrato_boss},
