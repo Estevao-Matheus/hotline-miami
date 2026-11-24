@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://fl3rwvnlcbih"]
+
+[ext_resource type="Script" uid="uid://dmn1phtmqcqve" path="res://scripts/hud.gd" id="1_ahhtf"]
+[ext_resource type="FontFile" uid="uid://is4x2qnwj2wi" path="res://assets/fonts/discoduck3d.ttf" id="2_oo0fn"]
+
+[sub_resource type="Theme" id="Theme_dwfrr"]
+
+[sub_resource type="Theme" id="Theme_a0wh5"]
+default_font = ExtResource("2_oo0fn")
+default_font_size = 64
+
+[node name="Hud" type="CanvasLayer" unique_id=310022088]
+script = ExtResource("1_ahhtf")
+
+[node name="Control" type="Control" parent="." unique_id=239259113]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=453549381]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_dwfrr")
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_bottom = 60
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer" unique_id=1784304048]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/HBoxContainer" unique_id=1137639176]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="ammo_label" type="Label" parent="Control/MarginContainer/HBoxContainer" unique_id=112949209]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_a0wh5")
+theme_override_colors/font_color = Color(0.20392157, 0.9490196, 0.9411765, 1)
+theme_override_font_sizes/font_size = 48

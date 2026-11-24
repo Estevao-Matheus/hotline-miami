@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://bhuroqodxcgmr"]
+
+[ext_resource type="Script" uid="uid://5ve4sdw12mld" path="res://scripts/weapon_data.gd" id="1_287i7"]
+[ext_resource type="Texture2D" uid="uid://d3ai1fb0bjuf0" path="res://assets/ammo/slice05_.png" id="1_t0w1u"]
+[ext_resource type="Texture2D" uid="uid://cota8eaglrmo1" path="res://assets/guns/slice43_.png" id="2_78020"]
+[ext_resource type="AudioStream" uid="uid://m7eikhihwurg" path="res://assets/audio/M16.wav" id="4_ayy3c"]
+
+[resource]
+script = ExtResource("1_287i7")
+weapon_name = "Machine Gun"
+is_automatic = true
+fire_rate = 0.1
+bullet_speed = 900.0
+hud_icon = ExtResource("1_t0w1u")
+walk_animation = &"walk_machinegun"
+shoot_animation = &"shot_machinegun"
+idle_animation = &"idle_machinegun"
+ammo = 387
+pickup_icon = ExtResource("2_78020")
+shoot_sound = ExtResource("4_ayy3c")
+metadata/_custom_type_script = "uid://5ve4sdw12mld"

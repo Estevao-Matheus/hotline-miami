@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bmyk4ty315oa6"]
+
+[ext_resource type="FontFile" uid="uid://ckjlm265nhusr" path="res://assets/fonts/WIDEAWAKE.TTF" id="1_c4rma"]
+[ext_resource type="Script" uid="uid://dmyq14clb4ajg" path="res://scripts/dialogue_box.gd" id="1_ghj5q"]
+[ext_resource type="FontFile" uid="uid://ct7je5xod5v6f" path="res://assets/fonts/Friday13v12.ttf" id="3_df88m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwfrr"]
+bg_color = Color(0.039215688, 0.039215688, 0.05882353, 0.92156863)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0, 0.49803922, 1)
+
+[sub_resource type="Theme" id="Theme_46i3k"]
+
+[sub_resource type="Theme" id="Theme_hxn5s"]
+
+[sub_resource type="Theme" id="Theme_jjqvm"]
+
+[node name="Dialog_box" type="CanvasLayer" unique_id=180945452]
+layer = 10
+script = ExtResource("1_ghj5q")
+
+[node name="Control" type="Control" parent="." unique_id=1595702852]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1202246911]
+z_index = 10
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -171.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dwfrr")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer" unique_id=314597044]
+layout_mode = 2
+theme = SubResource("Theme_46i3k")
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer" unique_id=1684106893]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Portrait" type="TextureRect" parent="Control/PanelContainer/MarginContainer/HBoxContainer" unique_id=2018732402]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme = SubResource("Theme_hxn5s")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer/HBoxContainer" unique_id=521172527]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameLabel" type="Label" parent="Control/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1272810494]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.20392157, 0.9490196, 0.9411765, 1)
+theme_override_fonts/font = ExtResource("1_c4rma")
+theme_override_font_sizes/font_size = 18
+
+[node name="TextLabel" type="RichTextLabel" parent="Control/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1938172753]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_jjqvm")
+theme_override_colors/default_color = Color(0.20392157, 0.9490196, 0.9411765, 1)
+theme_override_fonts/normal_font = ExtResource("3_df88m")
+theme_override_fonts/bold_font = ExtResource("3_df88m")
+theme_override_font_sizes/normal_font_size = 22
+text = "Vin terminar o o que começei
+"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="Control" unique_id=1088278348]
+
+[connection signal="timeout" from="Control/Timer" to="Control" method="_on_timer_timeout"]

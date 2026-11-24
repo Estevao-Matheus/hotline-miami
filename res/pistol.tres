@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://2lglkqxyacr3"]
+
+[ext_resource type="Script" uid="uid://5ve4sdw12mld" path="res://scripts/weapon_data.gd" id="1_jblf5"]
+[ext_resource type="Texture2D" uid="uid://cwn3scww1ic7q" path="res://assets/ammo/slice02_.png" id="1_sficj"]
+[ext_resource type="Texture2D" uid="uid://c7xueq8c6s1yx" path="res://assets/guns/slice45_.png" id="2_5xhec"]
+[ext_resource type="AudioStream" uid="uid://b4ft5awt7g70a" path="res://assets/audio/Silencer.wav" id="4_5xhec"]
+
+[resource]
+script = ExtResource("1_jblf5")
+fire_rate = 0.3
+bullet_speed = 900.0
+hud_icon = ExtResource("1_sficj")
+pickup_icon = ExtResource("2_5xhec")
+shoot_sound = ExtResource("4_5xhec")
+metadata/_custom_type_script = "uid://5ve4sdw12mld"

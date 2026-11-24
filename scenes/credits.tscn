@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cjj3suw12uoi0"]
+
+[ext_resource type="Script" uid="uid://ch0g6ujb0qap0" path="res://scripts/credits.gd" id="1_brbbq"]
+[ext_resource type="FontFile" uid="uid://is4x2qnwj2wi" path="res://assets/fonts/discoduck3d.ttf" id="1_r67kn"]
+[ext_resource type="FontFile" uid="uid://ckjlm265nhusr" path="res://assets/fonts/WIDEAWAKE.TTF" id="2_brbbq"]
+[ext_resource type="FontFile" uid="uid://ct7je5xod5v6f" path="res://assets/fonts/Friday13v12.ttf" id="3_8n18e"]
+
+[sub_resource type="Theme" id="Theme_8n18e"]
+
+[node name="Control" type="Control" unique_id=1279261124]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_brbbq")
+
+[node name="Background" type="ColorRect" parent="." unique_id=107601013]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16862746, 0.03529412, 0.14117648, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=205771961]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.5
+offset_top = -240.0
+offset_right = 148.5
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1851154090]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 57
+text = "Créditos"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1495169542]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.09019608, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_8n18e")
+text = "
+Desenvolvimento:Matheus Estevao Faria  
+Engine: Godot Engine
+
+---
+
+CONTROLES
+
+- W, A, S, D — Movimentar o personagem.
+- Botão esquerdo do mouse — Atirar.
+- Botão esquerdo do mouse — Pegar armas do chao.
+Clique fora do dialogo para avançar as falas.
+- R— Reiniciar a fase.
+
+---
+
+AGRADECIMENTOS
+
+Obrigado por jogar!"
+fit_content = true
+
+[node name="voltar" type="Button" parent="VBoxContainer" unique_id=988089386]
+layout_mode = 2
+theme = SubResource("Theme_8n18e")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.9411765, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("2_brbbq")
+theme_override_font_sizes/font_size = 47
+text = "Voltar
+"
+
+[connection signal="pressed" from="VBoxContainer/voltar" to="." method="_on_voltar_pressed"]
